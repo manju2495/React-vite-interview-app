@@ -1,0 +1,424 @@
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Today — Rescheduled Plan (3:00 PM Start)</title>
+  <style>
+    :root{
+      --bg:#f8fafc; /* light background */
+      --card:#ffffff; /* white card */
+      --accent:#3b82f6; /* blue accent */
+      --muted:#6b7280; /* muted text */
+      --text:#111827; /* main text */
+      --border:#e5e7eb; /* light border */
+    }
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+    body{
+      background: var(--bg);
+      color: var(--text);
+      display:flex;
+      justify-content:center;
+      padding:28px;
+    }
+    .wrap{width:100%;max-width:920px;}
+    header{
+      margin-bottom:18px;
+      padding-bottom:12px;
+      border-bottom:1px solid var(--border);
+    }
+    header h1{font-size:20px;margin:0;}
+    p.lead{margin:6px 0 18px;color:var(--muted);}
+    .card{background:var(--card); padding:18px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08);}
+    table{width:100%;border-collapse:collapse;font-size:14px;}
+    thead th{text-align:left;padding:12px 10px;border-bottom:1px dashed var(--border);color:var(--muted); font-weight:600; font-size:13px;}
+    tbody td{padding:12px 10px;border-bottom:1px solid var(--border); vertical-align:middle;}
+    tbody tr:nth-child(even){background-color:#f1f5f9;} /* subtle striped rows */
+    .time{width:125px;color:var(--accent);font-weight:600;}
+    .task{min-width:280px;}
+    .notes{color:var(--muted);font-size:13px;}
+    .checkbox{display:flex;align-items:center;gap:8px;}
+    input[type="checkbox"]{width:18px;height:18px;margin:0;accent-color:var(--accent);cursor:pointer;}
+    .buttons{display:flex;gap:8px;margin-top:14px;justify-content:flex-end;}
+    .btn{background:transparent;border:1px solid var(--border);color:var(--text);padding:8px 12px;border-radius:8px;cursor:pointer;}
+    .btn.primary{background:var(--accent);border-color:transparent;color:#ffffff;font-weight:700;}
+    footer{margin-top:12px;color:var(--muted);font-size:13px;text-align:right;}
+    @media (max-width:640px){
+      .time{width:95px;font-size:13px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Day 1</h1>
+      <p class="lead">Compact, focused schedule to complete Day 1 tasks between 3:00 PM and 11:00 PM. Tick items as you finish.</p>
+    </header>
+
+    <div class="card" role="region" aria-label="Today's schedule">
+      <table>
+        <thead>
+          <tr>
+            <th class="time">Time (MST)</th>
+            <th class="task">Task</th>
+            <th class="notes">Focus / Notes</th>
+            <th style="width:72px"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time">3:00 – 4:00 PM</td>
+            <td class="task">CSS Focus</td>
+            <td class="notes">Box model refresher; flex centering; build one card (title, img, button)</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+          <tr>
+            <td class="time">4:00 – 6:00 PM</td>
+            <td class="task">JS Problem Solving (2 hr)</td>
+            <td class="notes">Arrays & loops: 5 easy + 2 medium (map, filter, reduce). Explain out loud.</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+          <tr>
+            <td class="time">6:00 – 6:15 PM</td>
+            <td class="task">Short Break</td>
+            <td class="notes">Stand, stretch, hydrate (15 mins)</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+          <tr>
+            <td class="time">6:15 – 8:15 PM</td>
+            <td class="task">React Hands-on (2 hr)</td>
+            <td class="notes">Create React app, components, props, simple state (counter or list). Test hot reload.</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+          <tr>
+            <td class="time">8:15 – 8:45 PM</td>
+            <td class="task">Dinner Break</td>
+            <td class="notes">Eat and rest — avoid screens if possible</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+          <tr>
+            <td class="time">8:45 – 9:45 PM</td>
+            <td class="task">Azure Practice (1 hr)</td>
+            <td class="notes">Create free account (if not), make Resource Group, explore Static Web App options</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+          <tr>
+            <td class="time">9:45 – 10:15 PM</td>
+            <td class="task">JS Revision (30 min)</td>
+            <td class="notes">Re-solve one earlier problem without looking at answers</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+          <tr>
+            <td class="time">10:15 – 10:45 PM</td>
+            <td class="task">HTML Quick Practice (30 min)</td>
+            <td class="notes">Page structure, semantic tags (`header`,`main`,`nav`,`footer`) and headings</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+          <tr>
+            <td class="time">10:45 – 11:00 PM</td>
+            <td class="task">Reflection / Notes (15 min)</td>
+            <td class="notes">Write 3 wins, 2 blockers, 1 focus for tomorrow</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <div class="buttons" role="toolbar" aria-label="actions">
+        <button class="btn" id="clear">Clear checks</button>
+        <button class="btn primary" id="print">Print / Save</button>
+      </div>
+
+      <footer>Tip: keep this page open while you work — tick tasks as done.</footer>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('clear').addEventListener('click', () => {
+      document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+    });
+    document.getElementById('print').addEventListener('click', () => window.print());
+  </script>
+</body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Day 2 — Rescheduled Plan</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --accent: #3b82f6;
+      --muted: #6b7280;
+      --text: #111827;
+      --border: #e5e7eb;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 28px;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 920px;
+    }
+
+    header {
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    p.lead {
+      margin: 6px 0 18px;
+      color: var(--muted);
+    }
+
+    .card {
+      background: var(--card);
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    thead th {
+      text-align: left;
+      padding: 12px 10px;
+      border-bottom: 1px dashed var(--border);
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    tbody td {
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f1f5f9;
+    }
+
+    .time {
+      width: 125px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .task {
+      min-width: 280px;
+    }
+
+    .notes {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin: 0;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      border-color: transparent;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    footer {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: right;
+    }
+
+    @media (max-width:640px) {
+      .time {
+        width: 95px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Day 2 Plan</h1>
+      <p class="lead">Focused schedule with HTML, CSS, JS, React, and Azure tasks. Tick items as you finish.</p>
+    </header>
+
+    <div class="card" role="region" aria-label="Day 2 schedule">
+      <table>
+        <thead>
+          <tr>
+            <th class="time">Time</th>
+            <th class="task">Task</th>
+            <th class="notes">Focus / Notes</th>
+            <th style="width:72px"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time">8:30 – 9:30 AM</td>
+            <td class="task">HTML Practice</td>
+            <td class="notes">Forms, input types, labels, validation</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+          <tr>
+            <td class="time">9:30 – 10:00 AM</td>
+            <td class="task">Breakfast / Short Break</td>
+            <td class="notes">Recharge, stretch</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+          <tr>
+            <td class="time">10:00 – 11:00 AM</td>
+            <td class="task">CSS Practice</td>
+            <td class="notes">Flexbox extended layouts</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+          <tr>
+            <td class="time">11:00 AM – 1:30 PM</td>
+            <td class="task">JS Problem Solving</td>
+            <td class="notes">
+              3 Easy + 3 Medium problems:<br>
+              <strong>Easy:</strong> Factorial, Sum of Array, Prime Check<br>
+              <strong>Medium:</strong> Max Subarray Sum, Deep Clone Object, Count Vowels
+            </td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+          <tr>
+            <td class="time">1:30 – 2:15 PM</td>
+            <td class="task">Lunch</td>
+            <td class="notes">Take a proper break</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+          <tr>
+            <td class="time">2:15 – 5:15 PM</td>
+            <td class="task">React Hands-on</td>
+            <td class="notes">React Query (TanStack): fetching, caching, multiple queries, DevTools</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+          <tr>
+            <td class="time">5:15 – 5:55 PM</td>
+            <td class="task">Evening Break / Tea</td>
+            <td class="notes">Refresh, short walk</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+          <tr>
+            <td class="time">5:55 – 6:55 PM</td>
+            <td class="task">Azure Practice</td>
+            <td class="notes">Create Resource Group, deploy HTML page to Static Web App</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+          <tr>
+            <td class="time">6:00 – 7:00 PM</td>
+            <td class="task">JS Revision / Extra Practice</td>
+            <td class="notes">Re-attempt problems or review tricky topics</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+          <tr>
+            <td class="time">7:00 – 8:00 PM</td>
+            <td class="task">Apply Job</td>
+            <td class="notes">Apply Atlease one Job</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+          <tr>
+            <td class="time">9:30 – 10:00 PM</td>
+            <td class="task">Reflection + Notes / Wrap-up</td>
+            <td class="notes">Summarize learnings, blockers, plan next day</td>
+            <td class="checkbox"><label><input type="checkbox" /></label></td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <div class="buttons" role="toolbar" aria-label="actions">
+        <button class="btn" id="clear">Clear checks</button>
+        <button class="btn primary" id="print">Print / Save</button>
+      </div>
+
+      <footer>Tip: keep this page open while you work — tick tasks as done.</footer>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('clear').addEventListener('click', () => {
+      document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+    });
+    document.getElementById('print').addEventListener('click', () => window.print());
+  </script>
+</body>
+
+</html>
